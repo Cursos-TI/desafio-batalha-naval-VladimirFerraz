@@ -12,10 +12,9 @@ int main() {
     
     int i, j;
     int tabuleiro[5][5] = {0};
-    //int tam = 5;
-    
-    printf(" \n BATALHA NAVAL \n\n");
-    printf(" A  B  C  D  E \n\n");
+        
+    printf(" \n BATALHA NAVAL \n");
+    printf(" A  B  C  D  E \n");
 
         for(i = 0; i < 5; i++){
             
