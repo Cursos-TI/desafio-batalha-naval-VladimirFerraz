@@ -2,7 +2,54 @@
 
 # define linha 10
 # define coluna 10
+# define linha1 5
+# define coluna1 5
 # define navio 3
+
+void cone(int tabuleiro[linha1][coluna1]) {
+    for (int i = 0; i < linha1; i++) {
+        for (int j = 0; j < coluna1; j++) {
+            
+            tabuleiro[0][2] = 3; 
+            tabuleiro[1][1] = 3;
+            tabuleiro[1][2] = 3;
+            tabuleiro[1][3] = 3;
+            tabuleiro[2][0] = 3;
+            tabuleiro[2][1] = 3;
+            tabuleiro[2][2] = 3;
+            tabuleiro[2][3] = 3;
+            tabuleiro[2][4] = 3;
+        }
+    }
+}
+
+void cruz(int tabuleiro[linha1][coluna1]) {
+    for (int i = 0; i < linha1; i++) {
+        for (int j = 0; j < coluna1; j++) {
+            
+            tabuleiro[0][2] = 3; 
+            tabuleiro[1][1] = 3;
+            tabuleiro[1][2] = 3;
+            tabuleiro[1][3] = 3;
+            tabuleiro[2][2] = 3;
+            tabuleiro[3][2] = 3;
+        }
+    }
+}
+
+void octa(int tabuleiro[linha1][coluna1]) {
+    for (int i = 0; i < linha1; i++) {
+        for (int j = 0; j < coluna1; j++) {
+            
+            tabuleiro[0][2] = 3; 
+            tabuleiro[1][1] = 3;
+            tabuleiro[1][2] = 3;
+            tabuleiro[1][3] = 3;
+            tabuleiro[2][2] = 3;
+        }
+    }
+}
+
 
 int main() {
         
@@ -60,21 +107,45 @@ int main() {
     // Sugestão: Utilize estruturas de repetição aninhadas para preencher as áreas afetadas por essas habilidades no tabuleiro.
     // Sugestão: Exiba o tabuleiro com as áreas afetadas, utilizando 0 para áreas não afetadas e 1 para áreas atingidas.
 
-    // Exemplos de exibição das habilidades:
-    // Exemplo para habilidade em cone:
-    // 0 0 1 0 0
-    // 0 1 1 1 0
-    // 1 1 1 1 1
-    
-    // Exemplo para habilidade em octaedro:
-    // 0 0 1 0 0
-    // 0 1 1 1 0
-    // 0 0 1 0 0
+    int habcone[linha1][coluna1] = {0};
+    int habcruz[linha1][coluna1] = {0};
+    int habocta[linha1][coluna1] = {0};
 
-    // Exemplo para habilidade em cruz:
-    // 0 0 1 0 0
-    // 1 1 1 1 1
-    // 0 0 1 0 0
+    cone(habcone);
+    cruz(habcruz);
+    octa(habocta);
+
+    printf("\n");
+    printf("Tabuleiro Cone:\n\n");
+    for (int i = 0; i < linha1; i++) {
+        for (int j = 0; j < coluna1; j++) {
+            printf("%d ", habcone[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+
+    printf("\n");
+    printf("Tabuleiro Cruz:\n\n");
+    for (int i = 0; i < linha1; i++) {
+        for (int j = 0; j < coluna1; j++) {
+            printf("%d ", habcruz[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+
+    printf("\n");
+    printf("Tabuleiro Octaedro:\n\n");
+    for (int i = 0; i < linha1; i++) {
+        for (int j = 0; j < coluna1; j++) {
+            printf("%d ", habocta[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+
+
 
     return 0;
 }
