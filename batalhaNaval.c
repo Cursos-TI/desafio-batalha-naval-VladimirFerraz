@@ -59,7 +59,7 @@ int main() {
     printf(" \n BATALHA NAVAL \n");
     printf(" \n A  B  C  D  E \n\n");
 
-    for (int i = 0; i < navio; i++){
+    for (i = 0; i < navio; i++){
         
         tabuleiro [ 0 ][ 0 + i] = 3; // horizontal
         tabuleiro [ 4 - i ][ 3 ] = 3; // vertical
@@ -84,7 +84,7 @@ int main() {
     printf(" \n --------BATALHA NAVAL-------- \n\n");
     printf(" A  B  C  D  E  F  G  H  I  J  \n\n");
 
-    for (int i = 0; i < navio; i++){
+    for (i = 0; i < navio; i++){
         
         tabuleiro1[2][4 + i] = 3; // horizontal
         tabuleiro1[5 + i][1] = 3; // vertical
@@ -92,8 +92,8 @@ int main() {
         tabuleiro1[6 + i][7 - i] = 3; // diagonal
     }
     
-    for (int i = 0; i < linha; i++) {
-        for (int j = 0; j < coluna; j++) {
+    for (i = 0; i < linha; i++) {
+        for (j = 0; j < coluna; j++) {
             printf(" %d ", tabuleiro1[i][j]);
         }
         printf("\n");
@@ -124,8 +124,6 @@ int main() {
         printf("\n");
     }
     printf("\n");
-
-    printf("\n");
     printf("Tabuleiro Cruz:\n\n");
     for (int i = 0; i < linha1; i++) {
         for (int j = 0; j < coluna1; j++) {
@@ -133,8 +131,6 @@ int main() {
         }
         printf("\n");
     }
-    printf("\n");
-
     printf("\n");
     printf("Tabuleiro Octaedro:\n\n");
     for (int i = 0; i < linha1; i++) {
@@ -144,8 +140,6 @@ int main() {
         printf("\n");
     }
     printf("\n");
-
-
 
     return 0;
 }
